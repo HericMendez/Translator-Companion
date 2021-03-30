@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator Companion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="action.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id=main>
+        <div id="title">
+            <h1><strong>Translator Companion</strong></h1>
+
+            <h4>Making your translator life easier!</h4>
+        </div>
+
+            <div class="input-field">
+
+                <p>
+                    <legend for="original-text">Original Text:</legend>
+                    <textarea name="original-text" id="original-text" class="userinput" cols="60" rows="3"></textarea>
+
+                    <input type="button" onclick="copyText('original-text')" class="form-button" name="copy-original"
+                        id="copy-original" value="Copy">
+
+                    <input type="button" onclick="document.getElementById('original-text').value=''" class="form-button"
+                        id="clear-original" value="Clear">
+                </p>
+
+
+                <p>
+                    <legend for="edited-text">Edited Text: </legend>
+                    <textarea name="edited-text" id="edited-text" class="userinput" cols="60" rows="3"></textarea>
+
+                    <input type="button" onclick="copyText('edited-text')" class="form-button" id="copy-edit"
+                        value="Copy">
+                    <input type="button" onclick="clearString('edited-text')" class="form-button" id="clear-edit"
+                        value="Clear">
+                </p>
+                <!--
+                <p>
+                    <legend for="output-text">Output Text: </legend>
+                    <textarea name="output-text" id="output-text" class="userinput" cols"60" rows="3"
+                        readonly></textarea>
+
+                    <input type="button" onclick="copyText('edited-text')" class="form-button" id="copy-edit"
+                        value="Copy">
+                    <input type="button" onclick="clearString('edited-text')" class="form-button" id="clear-edit"
+                        value="Clear">
+                    <input type="button" onclick="" class="form-button" id="clear-all" value="[Auto-translate]">
+                </p>
+            -->
+            </div>
+
+            <div id="checkbox">
+
+                <input type="checkbox" id="ignore-tag" name="ignore-tag">
+                <label for="tag">Ignore tag characters</label><br>
+
+                
+
+
+            </div>
+
+
+            <div class="input-field">
+                <p id="textfix">Max. character limit: </p>
+                <input type="number" name="max-char" id="max-char" value="44">
+
+                <input type="button" onclick="stringSize()" class="form-button" id="compare-strings" value="Compare">
+                <input type="button" onclick="clearAll()" class="form-button" id="clear-all" value="Clear All">
+            </div>
+
+
+
+            <div id="result-window"><span id="show-result"></span></div>
+            
+    
+
+
+
+
+    </div>
+    
+
+
+</body>
+
+</html>
